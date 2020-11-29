@@ -20,6 +20,7 @@
   <li>org.json</li>
   <li>commons-io</li>
   <li>com.fasterxml.jackson.core</li>
+  <li>org.apache.httpcomponents</li>
 </ul>  
 
 
