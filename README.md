@@ -37,9 +37,9 @@
 <h2>Postman Collections</h2>
 <P>Import collection links under Postman Import</P>
 <ul>
-  <li>https://www.getpostman.com/collections/4dd6c46b8e366e4743d9</li>
-  <li>https://www.getpostman.com/collections/29550f8422c248843000</li>
-  <li>https://www.getpostman.com/collections/0d1efdbcd15ed711e2c9</li>
+  <li>https://www.getpostman.com/collections/f4761160cfb663284dc5</li>
+  <li>https://www.getpostman.com/collections/323861d7d5319e15ad19</li>
+  <li>https://www.getpostman.com/collections/a58a0322260a012f416c</li>
 </ul>  
 
 <h2>Twitch</h2>
