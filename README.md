@@ -29,5 +29,22 @@
 <ul>
   <li>IntelliJ</li>
   <li>Postman</li>
+  <li>Twitch</li>
 </ul>  
 
+
+
+<h2>Postman Collections</h2>
+<P>Import collection links under Postman Import</P>
+<ul>
+  <li>https://www.getpostman.com/collections/4dd6c46b8e366e4743d9</li>
+  <li>https://www.getpostman.com/collections/29550f8422c248843000</li>
+  <li>https://www.getpostman.com/collections/0d1efdbcd15ed711e2c9</li>
+</ul>  
+
+<h2>Twitch</h2>
+
+<ul>
+  <li>Get the Twith token: https://dev.twitch.tv/docs/authentication/getting-tokens-oauth</li>
+
+</ul>  
