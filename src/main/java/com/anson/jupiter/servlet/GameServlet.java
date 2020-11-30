@@ -14,8 +14,10 @@ import org.json.JSONObject;
 
 
 /**
- * restful three requirements 1. doPost, doGet 2. Implements specific function depending on specific
- * URL 3. No relation between different requests
+ * restful three requirements
+ * 1. doPost, doGet
+ * 2. Implements specific function depending on specific URL
+ * 3. No relation between different requests
  */
 @WebServlet(name = "GameServlet", urlPatterns = {"/game"})
 public class GameServlet extends HttpServlet {
@@ -88,7 +90,5 @@ public class GameServlet extends HttpServlet {
     } catch (TwitchException e) {
       throw new ServletException(e);
     }
-
-
   }
 }
