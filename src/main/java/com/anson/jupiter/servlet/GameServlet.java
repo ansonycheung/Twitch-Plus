@@ -1,6 +1,7 @@
 package com.anson.jupiter.servlet;
 
-import com.anson.jupiter.entity.*;
+import com.anson.jupiter.external.TwitchClient;
+import com.anson.jupiter.external.TwitchException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -12,6 +13,10 @@ import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 
 
+/**
+ * restful three requirements 1. doPost, doGet 2. Implements specific function depending on specific
+ * URL 3. No relation between different requests
+ */
 @WebServlet(name = "GameServlet", urlPatterns = {"/game"})
 public class GameServlet extends HttpServlet {
 
@@ -62,12 +67,27 @@ public class GameServlet extends HttpServlet {
 //    game.put("price", 49.99);
 //    response.getWriter().print(game);
 
-    // solution 3: convert java object to JSON object via Jackson, it simplify solution 1
-    response.setContentType("application/json");
-    ObjectMapper mapper = new ObjectMapper();
-    Game game = new Game("World of Warcraft", "Blizzard Entertainment",
-        "Feb 11, 2005", "https://www.worldofwarcraft.com", 49.99);
-    response.getWriter().print(mapper.writeValueAsString(game));
+//    solution 3: convert java object to JSON object via Jackson, it simplify solution 1
+//    response.setContentType("application/json");
+//    ObjectMapper mapper = new ObjectMapper();
+//    Game game = new Game("World of Warcraft", "Blizzard Entertainment",
+//        "Feb 11, 2005", "https://www.worldofwarcraft.com", 49.99);
+//    response.getWriter().print(mapper.writeValueAsString(game));
+
+    String gameName = request.getParameter("game_name");
+    TwitchClient client = new TwitchClient();
+
+    response.setContentType("application/json;charset=UTF-8");
+    try {
+      if (gameName != null) {
+        response.getWriter()
+            .print(new ObjectMapper().writeValueAsString(client.searchGame(gameName)));
+      } else {
+        response.getWriter().print(new ObjectMapper().writeValueAsString(client.topGames(0)));
+      }
+    } catch (TwitchException e) {
+      throw new ServletException(e);
+    }
 
 
   }
