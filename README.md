@@ -20,6 +20,7 @@
   <li>org.json</li>
   <li>commons-io</li>
   <li>com.fasterxml.jackson.core</li>
+  <li>org.apache.httpcomponents</li>
 </ul>  
 
 
@@ -29,5 +30,22 @@
 <ul>
   <li>IntelliJ</li>
   <li>Postman</li>
+  <li>Twitch</li>
 </ul>  
 
+
+
+<h2>Postman Collections</h2>
+<P>Import collection links under Postman Import</P>
+<ul>
+  <li>https://www.getpostman.com/collections/f4761160cfb663284dc5</li>
+  <li>https://www.getpostman.com/collections/323861d7d5319e15ad19</li>
+  <li>https://www.getpostman.com/collections/a58a0322260a012f416c</li>
+</ul>  
+
+<h2>Twitch</h2>
+
+<ul>
+  <li>Get the Twith token: https://dev.twitch.tv/docs/authentication/getting-tokens-oauth</li>
+
+</ul>  
