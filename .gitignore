@@ -10,8 +10,11 @@ out/
 build
 gradle
 target
+resources/
 .class
 .html
 .classpath
 ConnectionManager.java
 TwitchClient.java
+MySQLDBUtil.java
+config.properties
