@@ -21,6 +21,7 @@
   <li>commons-io</li>
   <li>com.fasterxml.jackson.core</li>
   <li>org.apache.httpcomponents</li>
+  <li>mysql-connector-java</li>  
 </ul>  
 
 
