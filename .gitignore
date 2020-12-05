@@ -10,7 +10,7 @@ out/
 build
 gradle
 target
-resources/
+resources
 .class
 .html
 .classpath
