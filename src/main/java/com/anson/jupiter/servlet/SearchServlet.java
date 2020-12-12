@@ -31,10 +31,13 @@ public class SearchServlet extends HttpServlet {
     TwitchClient client = new TwitchClient();
 
     try {
-      response.setContentType("application/json;charset=UTF-8");
-      Map<String, List<Item>> items = client.searchItems(gameId);
-      // different direction mapping at line 193 TwitchClient.java
-      response.getWriter().print(new ObjectMapper().writeValueAsString(items));
+//      // format to JSON, and support different languages (char set)
+//      // use "ServletUtil.writeItemMap(response, itemMap);" instead of next three lines
+//      response.setContentType("application/json;charset=UTF-8");
+//      Map<String, List<Item>> items = client.searchItems(gameId);
+//      // different direction mapping at line 193 TwitchClient.java
+//      response.getWriter().print(new ObjectMapper().writeValueAsString(items));
+      ServletUtil.writeItemMap(response, client.searchItems(gameId));
     } catch (TwitchException e) {
       throw new ServletException(e);
     }
