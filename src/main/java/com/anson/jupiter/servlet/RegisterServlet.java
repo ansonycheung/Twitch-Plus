@@ -27,6 +27,7 @@ public class RegisterServlet extends HttpServlet {
     MySQLConnection connection = null;
     try {
       connection = new MySQLConnection();
+      // Do not forget the step of encrypting password
       user.setPassword(ServletUtil.encryptPassword(user.getUserId(), user.getPassword()));
       isUserAdded = connection.addUser(user);
     } catch (MySQLException e) {
