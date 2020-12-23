@@ -18,8 +18,9 @@ public class LoginServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    LoginRequestBody body = mapper.readValue(request.getReader(), LoginRequestBody.class);
+//    ObjectMapper mapper = new ObjectMapper();
+//    LoginRequestBody body = mapper.readValue(request.getReader(), LoginRequestBody.class);
+    LoginRequestBody body = ServletUtil.readRequestBody(LoginRequestBody.class, request);
     if (body == null) {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       return;
@@ -49,7 +50,9 @@ public class LoginServlet extends HttpServlet {
       // Tomcat will directly send cookies in the HTTP response (internal management of sessionId)
       LoginResponseBody loginResponseBody = new LoginResponseBody(body.getUserId(), username);
       response.setContentType("application/json;charset=UTF-8");
-      response.getWriter().print(new ObjectMapper().writeValueAsString(loginResponseBody));
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writeValue(response.getWriter(), loginResponseBody);
+//      response.getWriter().print(new ObjectMapper().writeValueAsString(loginResponseBody));
     } else {
       response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     }
