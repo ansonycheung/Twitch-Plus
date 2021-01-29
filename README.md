@@ -11,6 +11,40 @@
   <li>Deployed the service to AWS EC2 for better stability.</li>
 </ul>  
 
+<h2>Features</h2>
+<ul>
+  <li>Top Game - Streams</li>
+  <li>Top Game - Videos</li>
+  <li>Top Game - Clips</li>
+  <li>Game Search</li>
+  <li>Game Recommendation</li>
+  <li>Game Favorities</li>
+</ul>
+
+<h3>Top Game - Streams</h3>
+
+![Top Game - Streams](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/top%20game%20-%20streams.png)
+
+<h3>Top Game - Videos</h3>
+
+![Top Game - Videos](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/top%20game%20-%20videos.png)
+
+<h3>Top Game - Clips</h3>
+
+![Top Game - Clips](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/top%20game%20-%20clips.png)
+
+<h3>Game Search</h3>
+
+![Game Search](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/game%20search.png)
+
+<h3>Game Recommendation</h3>
+
+![Game Recommendation](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/game%20recommendation.png)
+
+<h3>Game Favorities</h3>
+
+![Game Favorities](https://github.com/ansonycheung/Twitch-plus/blob/master/src/main/webapp/game%20favorities.png)
+
 
 <h2>Maven</h2>
 <P>In this project, I use Maven to manage build configurations and dependencies.</P>
@@ -55,5 +89,4 @@
 
 <ul>
   <li>Get the Twith token: https://dev.twitch.tv/docs/authentication/getting-tokens-oauth</li>
-
 </ul>  
